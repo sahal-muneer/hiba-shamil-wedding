@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hiba Fathima & Shamil</title>
+<meta name="description" content="You are warmly invited to the wedding reception of Hiba Fathima & Shamil · 1 January 2027 · Mina Manzil, Vakayad">
+<meta property="og:title" content="Hiba Fathima & Shamil · Wedding Reception">
+<meta property="og:description" content="1 January 2027 · 4.00 pm onwards · Mina Manzil, Vakayad">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f3ead8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#f8f2e4;
+    --cream:#f1e7d1;
+    --sand:#e7d9bb;
+    --gold:#b8955a;
+    --gold-soft:#d4bc8c;
+    --ink:#3b3820;
+    --ink-soft:#5c5838;
+    --leaf:#6f7f52;
+    --leaf-dark:#4e5c38;
+    --leaf-light:#a3b07f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    min-height:100vh;
+    background:
+      radial-gradient(ellipse at 50% 0%, #fbf7ee 0%, transparent 60%),
+      linear-gradient(170deg, #efe4cc 0%, #f6efe0 45%, #ebdfc4 100%);
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:"Cormorant Garamond", Georgia, serif;
+    font-variant-numeric:lining-nums;
+    display:flex;justify-content:center;
+    padding:28px 16px 48px;
+  }
+
+  /* ---------- Card ---------- */
+  .card{
+    position:relative;
+    width:100%;max-width:560px;min-width:0;
+    background:
+      radial-gradient(ellipse at 50% 35%, #fcf8ef 0%, var(--ivory) 45%, var(--cream) 100%);
+    border-radius:26px;
+    box-shadow:0 20px 50px -18px rgba(90,70,30,.35), 0 2px 6px rgba(90,70,30,.08);
+    padding:64px 34px 70px;
+    overflow:hidden;
+    text-align:center;
+  }
+  /* paper grain */
+  .card::before{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55  0 0 0 0 .45  0 0 0 0 .3  0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* double gold frame */
+  .frame{position:absolute;inset:14px;border:1.5px solid var(--gold);border-radius:16px;pointer-events:none}
+  .frame::after{content:"";position:absolute;inset:5px;border:1px solid var(--gold-soft);border-radius:12px}
+
+  .flora{position:absolute;width:78%;max-width:400px;pointer-events:none;z-index:2}
+  .flora.tr{top:-30px;right:-34px}
+  .flora.bl{bottom:-30px;left:-34px;transform:rotate(180deg)}
+
+  .content{position:relative;z-index:1}
+
+  .bismillah{font-family:"Amiri",serif;font-size:30px;color:var(--ink);line-height:1.4;direction:rtl}
+  .divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:14px auto;color:var(--gold);width:72%}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 30%,var(--gold) 70%,transparent)}
+  .divider svg{width:16px;height:16px;flex:none}
+
+  .hosts{font-size:27px;font-weight:500;letter-spacing:.3px}
+  .caps{font-family:"Cinzel",serif;font-size:12.5px;letter-spacing:2px;color:var(--ink-soft);line-height:1.7;text-transform:uppercase}
+  .caps a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--gold)}
+  .request{font-style:italic;font-size:20px;line-height:1.55;color:var(--ink-soft);margin:18px auto 6px;max-width:380px}
+
+  .script{font-family:"Great Vibes",cursive;font-weight:400;color:var(--ink);line-height:1.05}
+  .bride{font-size:clamp(50px,13vw,70px);margin-top:10px}
+  .with{font-style:italic;font-size:21px;margin:2px 0 -2px;color:var(--ink-soft)}
+  .groom{font-size:clamp(58px,15vw,80px)}
+  .parents{margin-top:10px}
+  .inshallah{font-style:italic;font-size:22px;margin-top:18px}
+  .event{font-family:"Cinzel",serif;letter-spacing:4px;font-size:14.5px;margin-top:2px}
+
+  .date{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;margin:16px 0 6px}
+  .date .side{border-top:1px solid var(--gold-soft);border-bottom:1px solid var(--gold-soft);padding:9px 2px}
+  .month{font-family:"Cinzel",serif;font-size:19px;letter-spacing:1.5px}
+  .year{font-size:30px;font-weight:500;line-height:1}
+  .small{font-family:"Cinzel",serif;font-size:11px;letter-spacing:2.5px;color:var(--ink-soft);margin-top:3px}
+  .day{position:relative;width:92px;height:92px;display:grid;place-items:center}
+  .day::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--gold)}
+  .day::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px dashed var(--gold-soft)}
+  .day span{font-size:46px;font-weight:500;line-height:1}
+
+  .venue{font-size:20px;font-style:italic;margin-top:12px;line-height:1.45}
+  .venue b{font-style:italic;font-weight:600}
+
+  /* ---------- Celebrations timeline ---------- */
+  .timeline{list-style:none;margin-top:14px}
+  .timeline li{position:relative;width:fit-content;margin:0 auto;padding:10px 22px 12px;border-radius:16px;
+    opacity:0;transform:translateY(16px);transition:opacity .9s ease, transform .9s cubic-bezier(.16,1,.3,1)}
+  .timeline li + li{margin-top:42px}
+  /* gold thread joining one event to the next */
+  .timeline li + li::before{content:"";position:absolute;left:50%;top:-38px;width:1px;height:34px;
+    background:linear-gradient(var(--gold-soft),var(--gold));transform:scaleY(0);transform-origin:top;
+    transition:transform .7s ease}
+  .timeline li + li::after{content:"";position:absolute;left:calc(50% - 3px);top:-7px;width:6px;height:6px;
+    background:var(--gold);transform:rotate(45deg) scale(0);transition:transform .4s ease}
+  .timeline .main{border:1px solid var(--gold-soft);background:rgba(255,252,244,.6)}
+  .ev-name{font-size:42px;padding:0 .2em}
+  .ev-date{font-family:"Cinzel",serif;font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ink-soft);margin-top:2px}
+  .ev-time{font-style:italic;font-size:19px;margin-top:2px}
+  .ev-place{font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:20px;opacity:0;transition:opacity 1s ease 2.4s}
+  .ev-place b{font-weight:600;color:var(--ink)}
+  .in .ev-place{opacity:1}
+  .in .timeline li{opacity:1;transform:none}
+  .in .timeline li + li::before{transform:scaleY(1)}
+  .in .timeline li + li::after{transform:rotate(45deg) scale(1)}
+  .timeline li:nth-child(1),.timeline li:nth-child(1) .script{transition-delay:.2s}
+  .timeline li:nth-child(2)::before{transition-delay:.6s}
+  .timeline li:nth-child(2)::after{transition-delay:1s}
+  .timeline li:nth-child(2),.timeline li:nth-child(2) .script{transition-delay:1s}
+  .timeline li:nth-child(3)::before{transition-delay:1.4s}
+  .timeline li:nth-child(3)::after{transition-delay:1.8s}
+  .timeline li:nth-child(3),.timeline li:nth-child(3) .script{transition-delay:1.8s}
+  .wishes{font-style:italic;font-size:17px;color:var(--ink-soft);line-height:1.5}
+  .wishes em{font-size:15px}
+
+  /* ---------- Family photo in a gold arch ---------- */
+  .photo{width:min(250px,72%);margin:36px auto 0}
+  .arch{position:relative;padding:7px;border:1.5px solid var(--gold);border-radius:999px 999px 20px 20px;
+    box-shadow:0 18px 34px -20px rgba(90,70,30,.55)}
+  .arch::after{content:"";position:absolute;inset:3px;border:1px solid var(--gold-soft);border-radius:999px 999px 17px 17px;pointer-events:none}
+  .arch-in{overflow:hidden;border-radius:999px 999px 14px 14px;clip-path:inset(100% 0 0 0);
+    transition:clip-path 1.7s cubic-bezier(.65,0,.25,1) .3s}
+  .arch-in img{display:block;width:100%;height:auto;transform:scale(1.2);
+    transition:transform 2.8s cubic-bezier(.16,1,.3,1) .3s}
+  .photo.in .arch-in{clip-path:inset(0)}
+  .photo.in .arch-in img{transform:none}
+
+  /* ---------- Countdown ---------- */
+  .countdown{display:flex;justify-content:center;gap:10px;margin:26px 0 8px}
+  .cd{min-width:62px;padding:10px 4px 8px;border:1px solid var(--gold-soft);border-radius:10px;background:rgba(255,252,244,.6)}
+  .cd b{display:block;font-size:28px;font-weight:500;line-height:1}
+  .cd i{font-style:normal;font-family:"Cinzel",serif;font-size:9.5px;letter-spacing:1.8px;color:var(--ink-soft)}
+  .cd-done{font-style:italic;font-size:20px;margin:22px 0 4px}
+
+  /* ---------- Buttons ---------- */
+  .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"Cinzel",serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase;
+    color:var(--ink);text-decoration:none;
+    padding:11px 16px;border-radius:999px;border:1px solid var(--gold);
+    background:linear-gradient(180deg,#fffaf0,#f1e5c9);
+    box-shadow:0 2px 6px -2px rgba(120,90,40,.25);
+    transition:transform .15s ease, box-shadow .15s ease;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 6px 14px -4px rgba(120,90,40,.35)}
+  .btn svg{width:15px;height:15px;stroke:var(--leaf-dark);fill:none;stroke-width:1.6}
+
+  .btn{position:relative;overflow:hidden}
+  .btn::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.75) 50%,transparent 70%);
+    transform:translateX(-120%);
+  }
+  .btn:hover::after{transform:translateX(120%);transition:transform .8s ease}
+
+  .btn{font:inherit;font-family:"Cinzel",serif;font-size:11.5px;letter-spacing:1.8px;text-transform:uppercase}
+
+  /* personal greeting on the opening screen */
+  .guest{display:block;margin-bottom:12px;font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:22px;letter-spacing:0;text-transform:none;color:var(--ink)}
+
+  /* ---------- Opening: palace doors ---------- */
+  .intro{
+    position:fixed;inset:0;z-index:50;display:grid;place-items:center;
+    perspective:1800px;
+    transition:visibility 0s linear 2.4s;
+  }
+  .intro.hide{visibility:hidden;pointer-events:none}
+  .door{
+    position:absolute;top:0;bottom:0;width:50.5%;
+    background:
+      radial-gradient(ellipse at 50% 30%,rgba(255,252,244,.7),transparent 70%),
+      linear-gradient(170deg,#efe4cc,#f6efe0 50%,#e8dbbe);
+    box-shadow:inset 0 0 60px rgba(150,120,60,.18);
+    transition:transform 1.9s cubic-bezier(.65,0,.25,1) .55s, opacity 1.2s ease 1.2s;
+    backface-visibility:hidden;
+  }
+  .door::before{content:"";position:absolute;inset:18px;border:1.5px solid var(--gold);border-radius:14px}
+  .door::after{content:"";position:absolute;inset:25px;border:1px solid var(--gold-soft);border-radius:10px}
+  .door.l{left:0;transform-origin:left center}
+  .door.r{right:0;transform-origin:right center}
+  .door.l::before,.door.l::after{border-right:none;border-top-right-radius:0;border-bottom-right-radius:0;right:0}
+  .door.r::before,.door.r::after{border-left:none;border-top-left-radius:0;border-bottom-left-radius:0;left:0}
+  .intro.hide .door.l{transform:rotateY(-108deg);opacity:0}
+  .intro.hide .door.r{transform:rotateY(108deg);opacity:0}
+
+  .intro-inner{position:relative;text-align:center;padding:24px;transition:opacity .6s ease, transform .9s ease, filter .6s ease}
+  .intro.hide .intro-inner{opacity:0;transform:scale(1.08);filter:blur(4px)}
+  .intro-inner > *{opacity:0;animation:rise 1.2s cubic-bezier(.16,1,.3,1) both}
+  .intro-inner > :nth-child(1){animation-delay:.2s}
+  .intro-inner > :nth-child(2){animation-delay:.5s}
+  .intro-inner > :nth-child(3){animation-delay:.8s}
+  .intro-inner > :nth-child(4){animation-delay:1s}
+  .intro-inner > :nth-child(5){animation-delay:1.4s}
+  .intro-inner > :nth-child(6){animation-delay:1.7s}
+  @keyframes rise{from{opacity:0;transform:translateY(18px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
+  .intro .script{font-size:clamp(46px,12vw,64px)}
+  .intro .amp{font-family:"Great Vibes",cursive;font-size:34px;color:var(--gold);margin:-4px 0}
+  .seal{
+    margin:28px auto 14px;width:96px;height:96px;border-radius:50%;
+    display:grid;place-items:center;cursor:pointer;border:none;
+    background:radial-gradient(circle at 35% 30%,#d9c08d,#b8955a 60%,#94733e);
+    box-shadow:0 8px 20px -6px rgba(110,80,30,.55), inset 0 0 0 4px rgba(255,255,255,.25);
+    color:#fff8e8;font-family:"Great Vibes",cursive;font-size:36px;
+    position:relative;
+    animation:rise 1.2s cubic-bezier(.16,1,.3,1) 1.4s both, pulse 2.4s ease-in-out 2.6s infinite;
+  }
+  .seal::before{
+    content:"";position:absolute;inset:-9px;border-radius:50%;
+    border:1px dashed var(--gold);animation:spin 18s linear infinite;
+  }
+  @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .tap{font-family:"Cinzel",serif;font-size:11px;letter-spacing:3px;color:var(--ink-soft)}
+  .tap.blink{animation:rise 1.2s ease 1.7s both, breathe 2.4s ease-in-out 2.9s infinite}
+  @keyframes breathe{50%{opacity:.45}}
+
+  /* gold sparks when the seal is pressed */
+  .spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:60;
+    background:radial-gradient(circle,#fff6d8,#d4bc8c 55%,transparent 70%)}
+
+  /* ---------- Drifting jasmine ---------- */
+  .petals{position:fixed;inset:0;pointer-events:none;z-index:55;overflow:hidden}
+  .petal{position:absolute;top:-30px;animation:fall linear infinite}
+  .petal svg{display:block;width:100%;height:100%;animation:sway ease-in-out infinite alternate}
+  @keyframes fall{from{transform:translateY(-5vh)}to{transform:translateY(110vh)}}
+  @keyframes sway{from{transform:translateX(-22px) rotate(-40deg)}to{transform:translateX(22px) rotate(60deg)}}
+
+  /* ---------- Card entrance ---------- */
+  .frame{clip-path:inset(0 50% 0 50%);transition:clip-path 1.8s cubic-bezier(.65,0,.25,1) 1.1s}
+  .opened .frame{clip-path:inset(-2px)}
+
+  /* sprays grow out of their corner, then sway; animated on <use> so the bl flip stays intact */
+  .flora{opacity:0;transition:opacity 1.4s ease 1.3s}
+  .opened .flora{opacity:1}
+  .flora use{transform-box:view-box;transform-origin:320px 0}
+  .opened .flora use{animation:grow 2.2s cubic-bezier(.16,1,.3,1) 1.3s both, drift 7s ease-in-out 3.5s infinite alternate}
+  .opened .flora.bl use{animation-delay:1.6s,3.8s}
+  @keyframes grow{from{transform:scale(.5) rotate(-18deg)}to{transform:none}}
+  @keyframes drift{from{transform:none}to{transform:rotate(2.5deg)}}
+
+  .day::after{animation:spin 30s linear infinite}
+
+  /* names shimmer like gold leaf */
+  .bride,.groom{
+    padding:0 .3em;
+    background:linear-gradient(100deg,var(--ink) 42%,#c9a564 50%,var(--ink) 58%) 0 0/250% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:shine 7s ease-in-out 4s infinite;
+  }
+  @keyframes shine{from{background-position:100% 0}60%,to{background-position:0 0}}
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{opacity:0;transform:translateY(22px);filter:blur(4px);
+    transition:opacity 1.1s ease, transform 1.1s cubic-bezier(.16,1,.3,1), filter 1.1s ease}
+  .reveal.in{opacity:1;transform:none;filter:none}
+  /* names are written in, left to right */
+  .reveal .script{clip-path:inset(-30% 100% -30% -30%);transition:clip-path 1.6s cubic-bezier(.45,0,.2,1) .25s}
+  /* the couple's names are written slowly, one after the other */
+  .reveal .bride{transition:clip-path 3s cubic-bezier(.4,0,.3,1) .3s}
+  .reveal .groom{transition:clip-path 2.6s cubic-bezier(.4,0,.3,1) 3.1s}
+  .reveal.in .script{clip-path:inset(-30% -30% -30% -30%)}
+  .reveal .with{opacity:0;transition:opacity 1.2s ease 2.6s}
+  .reveal.in .with{opacity:1}
+  /* divider lines grow out from the sprig */
+  .divider::before,.divider::after{transform:scaleX(0);transition:transform 1.2s cubic-bezier(.16,1,.3,1) .3s}
+  .divider::before{transform-origin:right}
+  .divider::after{transform-origin:left}
+  .divider svg{opacity:0;transform:rotate(-90deg) scale(.4);transition:opacity .6s ease, transform 1s cubic-bezier(.34,1.56,.64,1)}
+  .reveal.in .divider::before,.reveal.in .divider::after,.reveal.in.divider::before,.reveal.in.divider::after{transform:none}
+  .reveal.in .divider svg,.reveal.in.divider svg{opacity:1;transform:none}
+  /* staggered countdown tiles and buttons */
+  .countdown .cd,.actions .btn{opacity:0;transform:translateY(12px) scale(.94);
+    transition:opacity .7s ease, transform .7s cubic-bezier(.34,1.56,.64,1), box-shadow .15s ease}
+  .in .cd,.actions.in .btn{opacity:1;transform:none}
+  .in .cd:nth-child(2),.actions.in .btn:nth-child(2){transition-delay:.12s}
+  .in .cd:nth-child(3),.actions.in .btn:nth-child(3){transition-delay:.24s}
+  .in .cd:nth-child(4),.actions.in .btn:nth-child(4){transition-delay:.36s}
+  .actions.in .btn:hover{transform:translateY(-2px);transition-delay:0s}
+
+  /* countdown digit flip */
+  .cd b.flip{animation:flip .5s cubic-bezier(.16,1,.3,1)}
+  @keyframes flip{from{opacity:0;transform:translateY(-45%) rotateX(70deg)}to{opacity:1;transform:none}}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation:none !important;transition:none !important}
+    .reveal,.reveal .script,.reveal .with,.countdown .cd,.actions .btn,.divider svg{opacity:1;transform:none;filter:none;clip-path:none}
+    .divider::before,.divider::after{transform:none}
+    .timeline li,.ev-place,.arch-in img{opacity:1;transform:none}
+    .arch-in{clip-path:none}
+    .timeline li + li::before{transform:none}
+    .timeline li + li::after{transform:rotate(45deg)}
+    .intro-inner > *,.flora{opacity:1}
+    .frame{clip-path:none}
+    .intro.hide{display:none}
+    .petals{display:none}
+  }
+
+  @media (max-width:420px){
+    .card{padding:56px 22px 64px}
+    .hosts{font-size:24px}
+    .caps{font-size:11px;letter-spacing:1.5px}
+    .request{font-size:18px}
+    .month{font-size:16px}
+    .year{font-size:26px}
+    .day{width:80px;height:80px}
+    .day span{font-size:40px}
+    .cd{min-width:56px}
+    .flora{width:82%}
+  }
+</style>
+</head>
+<body>
+
+<!-- Reusable floral spray: white roses, jasmine sprigs, sage leaves -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="petal" cx="45%" cy="40%" r="65%">
+      <stop offset="0" stop-color="#fffdf6"/>
+      <stop offset=".7" stop-color="#f5ecd8"/>
+      <stop offset="1" stop-color="#e2d3b0"/>
+    </radialGradient>
+    <linearGradient id="leafg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c9a68"/>
+      <stop offset="1" stop-color="#55643c"/>
+    </linearGradient>
+    <linearGradient id="leafl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9c497"/>
+      <stop offset="1" stop-color="#7d8c5a"/>
+    </linearGradient>
+
+    <g id="leaf"><path d="M0 0 C 8 -10, 26 -10, 36 0 C 26 10, 8 10, 0 0 Z" fill="url(#leafg)"/><path d="M2 0 L 33 0" stroke="#e9ecd8" stroke-opacity=".5" stroke-width=".8"/></g>
+    <g id="leafS"><path d="M0 0 C 6 -7, 18 -7, 25 0 C 18 7, 6 7, 0 0 Z" fill="url(#leafl)"/></g>
+
+    <g id="rose">
+      <circle r="26" fill="url(#petal)"/>
+      <g fill="url(#petal)" stroke="#d9c79f" stroke-width=".7">
+        <ellipse rx="15" ry="11" transform="translate(0 -13)"/>
+        <ellipse rx="15" ry="11" transform="rotate(72) translate(0 -13)"/>
+        <ellipse rx="15" ry="11" transform="rotate(144) translate(0 -13)"/>
+        <ellipse rx="15" ry="11" transform="rotate(216) translate(0 -13)"/>
+        <ellipse rx="15" ry="11" transform="rotate(288) translate(0 -13)"/>
+      </g>
+      <g fill="#fbf6ea" stroke="#d6c296" stroke-width=".7">
+        <ellipse rx="9" ry="7" transform="rotate(36) translate(0 -7)"/>
+        <ellipse rx="9" ry="7" transform="rotate(156) translate(0 -7)"/>
+        <ellipse rx="9" ry="7" transform="rotate(276) translate(0 -7)"/>
+      </g>
+      <path d="M-4 -1 C -2 -6, 5 -5, 4 0 C 3 4, -3 4, -2 0" fill="none" stroke="#c9b27f" stroke-width="1"/>
+      <circle r="2.2" fill="#d8c08a"/>
+    </g>
+
+    <g id="bloom">
+      <g fill="#fffdf5" stroke="#dccca6" stroke-width=".5">
+        <ellipse rx="3.6" ry="6" transform="translate(0 -5)"/>
+        <ellipse rx="3.6" ry="6" transform="rotate(72) translate(0 -5)"/>
+        <ellipse rx="3.6" ry="6" transform="rotate(144) translate(0 -5)"/>
+        <ellipse rx="3.6" ry="6" transform="rotate(216) translate(0 -5)"/>
+        <ellipse rx="3.6" ry="6" transform="rotate(288) translate(0 -5)"/>
+      </g>
+      <circle r="1.8" fill="#d6b86e"/>
+    </g>
+    <g id="bud"><ellipse rx="2.6" ry="4" fill="#fbf7ea" stroke="#d8c9a3" stroke-width=".5"/></g>
+
+    <symbol id="spray" viewBox="0 0 320 320">
+      <!-- stems -->
+      <g fill="none" stroke="#6f7f52" stroke-width="1.6" stroke-linecap="round">
+        <path d="M320 18 C 250 40, 200 60, 150 70"/>
+        <path d="M300 0 C 290 80, 285 160, 300 250"/>
+        <path d="M250 40 C 240 70, 225 90, 200 105"/>
+        <path d="M296 120 C 270 140, 255 160, 250 185"/>
+        <path d="M200 58 C 175 50, 150 40, 120 38"/>
+      </g>
+      <!-- leaves -->
+      <use href="#leaf" transform="translate(160 68) rotate(170)"/>
+      <use href="#leaf" transform="translate(190 62) rotate(-150)"/>
+      <use href="#leaf" transform="translate(212 98) rotate(140)"/>
+      <use href="#leaf" transform="translate(230 50) rotate(-120) scale(.9)"/>
+      <use href="#leaf" transform="translate(296 150) rotate(110)"/>
+      <use href="#leaf" transform="translate(300 200) rotate(70)"/>
+      <use href="#leaf" transform="translate(292 230) rotate(105) scale(.9)"/>
+      <use href="#leaf" transform="translate(262 165) rotate(130) scale(.85)"/>
+      <use href="#leafS" transform="translate(140 40) rotate(-170)"/>
+      <use href="#leafS" transform="translate(128 38) rotate(160)"/>
+      <use href="#leafS" transform="translate(252 182) rotate(100)"/>
+      <use href="#leafS" transform="translate(240 80) rotate(150)"/>
+      <use href="#leafS" transform="translate(298 95) rotate(-200)"/>
+      <use href="#leafS" transform="translate(310 260) rotate(80)"/>
+      <use href="#leaf" transform="translate(268 18) rotate(-160) scale(1.1)"/>
+      <use href="#leaf" transform="translate(316 70) rotate(150) scale(1.1)"/>
+
+      <!-- roses -->
+      <use href="#rose" transform="translate(286 34) scale(1.15)"/>
+      <use href="#rose" transform="translate(238 70) scale(.78) rotate(30)"/>
+      <use href="#rose" transform="translate(298 105) scale(.7) rotate(-20)"/>
+
+      <!-- jasmine blossoms -->
+      <use href="#bloom" transform="translate(200 52)"/>
+      <use href="#bloom" transform="translate(178 70) scale(.9) rotate(20)"/>
+      <use href="#bloom" transform="translate(150 50) scale(.85) rotate(40)"/>
+      <use href="#bloom" transform="translate(120 40) scale(.8)"/>
+      <use href="#bloom" transform="translate(208 108) scale(.95) rotate(10)"/>
+      <use href="#bloom" transform="translate(262 108) scale(.9) rotate(30)"/>
+      <use href="#bloom" transform="translate(270 140)"/>
+      <use href="#bloom" transform="translate(252 186) scale(.85) rotate(15)"/>
+      <use href="#bloom" transform="translate(286 175) scale(.9)"/>
+      <use href="#bloom" transform="translate(296 222) scale(.8) rotate(25)"/>
+      <use href="#bloom" transform="translate(300 252) scale(.7)"/>
+      <use href="#bloom" transform="translate(254 22) scale(.9)"/>
+      <use href="#bud" transform="translate(110 36) rotate(-70)"/>
+      <use href="#bud" transform="translate(166 82) rotate(-40)"/>
+      <use href="#bud" transform="translate(196 118) rotate(-30)"/>
+      <use href="#bud" transform="translate(246 200) rotate(-10)"/>
+      <use href="#bud" transform="translate(304 270)"/>
+      <use href="#bud" transform="translate(276 196) rotate(20)"/>
+    </symbol>
+
+    <symbol id="sprig" viewBox="0 0 16 16"><path d="M8 1 C 10 5, 10 9, 8 15 M8 6 C 5 5, 3 6, 2 8 M8 6 C 11 5, 13 6, 14 8" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><circle cx="8" cy="3" r="1.3" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- Opening screen -->
+<div class="intro" id="intro" role="dialog" aria-label="Open invitation">
+  <div class="door l"></div>
+  <div class="door r"></div>
+  <div class="intro-inner">
+    <div class="tap" style="margin-bottom:18px"><span class="guest" id="guest" hidden></span>You are invited</div>
+    <div class="script">Hiba Fathima</div>
+    <div class="amp">&amp;</div>
+    <div class="script">Shamil</div>
+    <button class="seal" id="openBtn" aria-label="Open invitation">H&thinsp;S</button>
+    <div class="tap blink">Tap to open</div>
+  </div>
+</div>
+
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<main class="card">
+  <div class="frame"></div>
+  <svg class="flora tr" viewBox="0 0 320 320" aria-hidden="true"><use href="#spray"/></svg>
+  <svg class="flora bl" viewBox="0 0 320 320" aria-hidden="true"><use href="#spray"/></svg>
+
+  <div class="content">
+    <div class="bismillah reveal">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <div class="divider reveal"><svg><use href="#sprig"/></svg></div>
+
+    <div class="reveal">
+      <div class="hosts">Mr. Ameer &amp; Mrs. Nasla</div>
+      <div class="caps" style="margin-top:4px">
+        Meethale Nelliyatt, Vakayad,<br>
+        Naduvannur, Kozhikode<br>
+        Mob: <a href="tel:+919539650276">9539 650 276</a>
+      </div>
+    </div>
+
+    <p class="request reveal">Warmly request the honour of your presence with family to share the joy on celebrating the wedding of our beloved daughter</p>
+
+    <div class="reveal">
+      <h1 class="script bride">Hiba Fathima</h1>
+      <div class="with">With</div>
+      <h1 class="script groom">Shamil</h1>
+      <div class="caps parents">
+        (S/o. Mr. Hamsa &amp; Mrs. Ayisha)<br>
+        Thankayathil House, Eramangalam
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="inshallah">Insha Allah</div>
+      <div class="divider" style="margin:8px auto"><svg><use href="#sprig"/></svg></div>
+      <div class="event">WEDDING RECEPTION</div>
+
+      <div class="date">
+        <div class="side">
+          <div class="month">JANUARY</div>
+          <div class="small" id="weekday">FRIDAY</div>
+        </div>
+        <div class="day"><span>01</span></div>
+        <div class="side">
+          <div class="year">2027</div>
+          <div class="small" style="letter-spacing:1px">(1448 Rajab 23)</div>
+        </div>
+      </div>
+
+      <div class="venue">4.00 pm Onwards at <b>Our Residence</b><br>Mina Manzil – Vakayad</div>
+    </div>
+
+    <div class="reveal">
+      <div class="divider" style="margin:26px auto 8px"><svg><use href="#sprig"/></svg></div>
+      <div class="event">CELEBRATIONS</div>
+      <ol class="timeline">
+        <li>
+          <div class="script ev-name">Mehandi</div>
+          <div class="ev-date">Thursday · 31 December 2026</div>
+          <div class="ev-time">Evening, 6.00 pm onwards</div>
+        </li>
+        <li class="main">
+          <div class="script ev-name">Reception</div>
+          <div class="ev-date">Friday · 1 January 2027</div>
+          <div class="ev-time">4.00 pm onwards</div>
+        </li>
+        <li>
+          <div class="script ev-name">Nikah</div>
+          <div class="ev-date">Saturday · 2 January 2027</div>
+          <div class="ev-time">1.00 pm</div>
+        </li>
+      </ol>
+      <div class="ev-place">All celebrations at <b>Mina Manzil</b> – Vakayad</div>
+    </div>
+
+    <div class="reveal" id="cdWrap">
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd"><b id="cdD">--</b><i>DAYS</i></div>
+        <div class="cd"><b id="cdH">--</b><i>HOURS</i></div>
+        <div class="cd"><b id="cdM">--</b><i>MINS</i></div>
+        <div class="cd"><b id="cdS">--</b><i>SECS</i></div>
+      </div>
+    </div>
+
+    <div class="actions reveal">
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/search/?api=1&query=Mina+Manzil+Vakayad+Naduvannur+Kozhikode">
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        Directions
+      </a>
+      <a class="btn" id="calBtn" target="_blank" rel="noopener"
+         href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah%20%C2%B7%20Hiba%20Fathima%20%26%20Shamil&dates=20270102T073000Z/20270102T093000Z&location=Mina%20Manzil%2C%20Vakayad%2C%20Naduvannur%2C%20Kozhikode&details=Insha%20Allah%2C%20Nikah%20at%201.00%20pm%2C%20Mina%20Manzil.">
+        <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>
+        Save the date
+      </a>
+      <a class="btn" href="tel:+919539650276">
+        <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+        Call
+      </a>
+      <button class="btn" id="shareBtn" type="button">
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        Share
+      </button>
+    </div>
+
+    <figure class="photo reveal">
+      <div class="arch"><div class="arch-in">
+        <img src="photos/kids.jpg" width="900" height="960" loading="lazy" alt="Two children of the family, smiling together">
+      </div></div>
+    </figure>
+
+    <div class="reveal" style="margin-top:26px">
+      <div class="divider" style="margin:0 auto 10px"><svg><use href="#sprig"/></svg></div>
+      <div class="wishes">
+        <em>Sharing the delight and with best wishes :</em><br>
+        Naba, Nada, Iza,<br>
+        M.N. Family &amp; M.K. Family
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Drifting jasmine blossoms
+  const petals = document.getElementById('petals');
+  const rand = (a, b) => a + Math.random() * (b - a);
+  if (!calm) {
+    for (let i = 0; i < 16; i++) {
+      const p = document.createElement('div');
+      const size = rand(12, 24), dur = rand(14, 26);
+      p.className = 'petal';
+      p.style.cssText = `left:${rand(0, 100)}%;width:${size}px;height:${size}px;opacity:${rand(.45, .85)};` +
+        `animation-duration:${dur}s;animation-delay:${-rand(0, dur)}s`;
+      p.innerHTML = `<svg viewBox="-12 -12 24 24" style="animation-duration:${rand(3, 6)}s"><use href="#bloom"/></svg>`;
+      petals.appendChild(p);
+    }
+  }
+
+  // Reveal each section as it scrolls into view, staggering those that arrive together
+  const io = new IntersectionObserver(entries => {
+    entries.filter(e => e.isIntersecting).forEach((e, i) => {
+      setTimeout(() => e.target.classList.add('in'), i * 180);
+      io.unobserve(e.target);
+    });
+  }, { threshold: .15, rootMargin: '0px 0px -8% 0px' });
+
+  // Opening screen: the seal bursts, the doors swing open
+  const intro = document.getElementById('intro');
+  const seal = document.getElementById('openBtn');
+  document.body.style.overflow = 'hidden';
+  const burst = () => {
+    const r = seal.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+    for (let i = 0; i < 26; i++) {
+      const s = document.createElement('div'), a = rand(0, Math.PI * 2), d = rand(60, 170);
+      s.className = 'spark';
+      s.style.left = cx - 3 + 'px'; s.style.top = cy - 3 + 'px';
+      document.body.appendChild(s);
+      s.animate([
+        { transform: 'translate(0,0) scale(1)', opacity: 1 },
+        { transform: `translate(${Math.cos(a) * d}px,${Math.sin(a) * d}px) scale(${rand(.3, 1.4)})`, opacity: 0 }
+      ], { duration: rand(800, 1300), easing: 'cubic-bezier(.16,1,.3,1)' }).onfinish = () => s.remove();
+    }
+  };
+  const open = () => {
+    seal.disabled = true;
+    if (!calm) burst();
+    intro.classList.add('hide');
+    document.body.classList.add('opened');
+    document.body.style.overflow = '';
+    setTimeout(() => document.querySelectorAll('.reveal').forEach(el => io.observe(el)), calm ? 0 : 1300);
+  };
+  seal.addEventListener('click', open);
+
+  // Personal greeting from the link, e.g. index.html?to=Rashid+Family
+  const guestName = (new URLSearchParams(location.search).get('to') || '').trim().slice(0, 40);
+  if (guestName) {
+    const g = document.getElementById('guest');
+    // ?to=Rashid → "Dear Rashid and Family," (left as typed if it already mentions family)
+    g.textContent = /family/i.test(guestName) ? `Dear ${guestName},` : `Dear ${guestName} and Family,`;
+    g.hidden = false;
+  }
+
+  // Save the date (Nikah): Apple devices get the .ics file, everyone else Google Calendar
+  if (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)) {
+    const cal = document.getElementById('calBtn');
+    cal.href = 'nikah.ics';
+    cal.removeAttribute('target');
+  }
+
+  // Share the plain invite link (without anyone's personal greeting)
+  const shareUrl = location.origin + location.pathname;
+  const shareText = 'You are warmly invited to the wedding reception of Hiba Fathima & Shamil · ' +
+    '1 January 2027 · 4.00 pm onwards · Mina Manzil, Vakayad';
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: 'Hiba Fathima & Shamil', text: shareText, url: shareUrl }); } catch {}
+    } else {
+      window.open('https://wa.me/?text=' + encodeURIComponent(shareText + '\n' + shareUrl), '_blank');
+    }
+  });
+  // Countdown to 1 Jan 2027, 4.00 pm IST
+  const target = new Date('2027-01-01T16:00:00+05:30').getTime();
+  const pad = n => String(n).padStart(2, '0');
+  const set = (id, v) => {
+    const el = document.getElementById(id);
+    v = String(v);
+    if (el.textContent === v) return;
+    el.textContent = v;
+    el.classList.remove('flip'); void el.offsetWidth; el.classList.add('flip');
+  };
+  const tick = () => {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      document.getElementById('cdWrap').innerHTML =
+        '<div class="cd-done">Alhamdulillah — the celebration has begun</div>';
+      return clearInterval(timer);
+    }
+    const s = Math.floor(diff / 1000);
+    set('cdD', Math.floor(s / 86400));
+    set('cdH', pad(Math.floor(s % 86400 / 3600)));
+    set('cdM', pad(Math.floor(s % 3600 / 60)));
+    set('cdS', pad(s % 60));
+  };
+  const timer = setInterval(tick, 1000);
+  tick();
+</script>
+</body>
+</html>
